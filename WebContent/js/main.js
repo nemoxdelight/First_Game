@@ -8,7 +8,7 @@ function init()
   canvas.height = height;
   ctx = canvas.getContext("2d");
   
-  // held1 = new Held();
+  held1 = new Held();
 
   startLoop();
   start_feinde_zeichnen();
@@ -44,8 +44,6 @@ function startLoop() {
 function loop(){
   clearCanvas();
   level();
-  if(!held1)
-      {held1 = new Held();}
   held1.draw();
   feinde_zeichnen();
   // snd.play();
@@ -55,7 +53,7 @@ function loop(){
 function move_held(p_event)
 {
   if (p_event.keyCode == KEY_RIGHT){
-    held1.held_y += held1.speed;
+    held1.held_y += 20;
     p_event.preventDefault(); 
   }
   if (p_event.keyCode == KEY_LEFT){
