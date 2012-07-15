@@ -11,4 +11,6 @@ body
   margin: 100px auto 0px;
   border: 2px solid #004b5c;
   background: #2f2f2f;
+  z-index: 2;
 }
+

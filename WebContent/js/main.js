@@ -68,10 +68,14 @@ function move_held(p_event)
     p_event.preventDefault();
   }
   if (p_event.keyCode == KEY_DOWN){
-    // runter();
     held1.runterTaste = true;
     p_event.preventDefault();
   }
+    if (p_event.keyCode == SPACEBAR){
+    held1.leerTaste = true;
+    p_event.preventDefault();
+  }
+
 }
 
 function stop_held(p_event)
@@ -93,5 +97,10 @@ function stop_held(p_event)
     held1.runterTaste = false;
     p_event.preventDefault();
   }
+  if (p_event.keyCode == SPACEBAR){
+    held1.leerTaste = false;
+    p_event.preventDefault();
+  }
+
 }
 

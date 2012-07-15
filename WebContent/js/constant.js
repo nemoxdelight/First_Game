@@ -1,6 +1,7 @@
 //CANVAS
 var canvas;
 var ctx;
+
 var width  = 800;
 var height = 500;
 
