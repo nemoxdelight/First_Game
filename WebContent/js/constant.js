@@ -5,8 +5,6 @@ var width  = 800;
 var height = 500;
 
 var held1;
-  held1 = new Held();
-
 
 
 //EINGABEN
