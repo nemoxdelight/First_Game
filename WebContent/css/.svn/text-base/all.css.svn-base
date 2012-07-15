@@ -1,0 +1,16 @@
+body
+{
+  text-align:       center;
+  background-color: #AAA;
+  font-size:        16pt;
+  padding:          10px;
+}
+
+canvas
+{
+  border-color: #777; 
+  border-width: 2px; 
+  border-style: solid;
+  
+  background-color: #CCC;
+}

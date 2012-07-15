@@ -8,7 +8,7 @@ function init()
   canvas.height = height;
   ctx = canvas.getContext("2d");
   
-  held1 = new Held();
+  // held1 = new Held();
 
   startLoop();
   start_feinde_zeichnen();
@@ -43,10 +43,11 @@ function startLoop() {
 
 function loop(){
   clearCanvas();
+  level();
+  if(!held1)
+      {held1 = new Held();}
   held1.draw();
   feinde_zeichnen();
-  level();
-
   // snd.play();
 }
 
@@ -54,18 +55,14 @@ function loop(){
 function move_held(p_event)
 {
   if (p_event.keyCode == KEY_RIGHT){
-    // rechts();
-    // held1.rechtsTaste = true;
     held1.held_y += held1.speed;
     p_event.preventDefault(); 
   }
   if (p_event.keyCode == KEY_LEFT){
-    // links();
     held1.linksTaste = true;
     p_event.preventDefault();
   }
   if (p_event.keyCode == KEY_UP){
-    // hoch();
     held1.hochTaste = true;
     p_event.preventDefault();
   }
@@ -78,6 +75,22 @@ function move_held(p_event)
 
 function stop_held(p_event)
 {
-  console.log("up");
+  if (p_event.keyCode == KEY_RIGHT){
+    held1.rechtsTaste = false;
+    p_event.preventDefault(); 
+  }
+  if (p_event.keyCode == KEY_LEFT){
+    held1.linksTaste = false;
+    p_event.preventDefault();
+  }
+  if (p_event.keyCode == KEY_UP){
+    held1.hochTaste = false;
+    p_event.preventDefault();
+  }
+  if (p_event.keyCode == KEY_DOWN){
+    // runter();
+    held1.runterTaste = false;
+    p_event.preventDefault();
+  }
 }
 

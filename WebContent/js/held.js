@@ -55,25 +55,3 @@ Held.prototype.tasteCheck = function() {
 	}
 };
 
-//ERWEITERUNG FÜR BEWEGUNG
-
-
-// function rechts(){
-// 	held1.held_x+=held1.speed;
-// 	if (held1.held_x===790) {held1.held_x--};
-// }
-
-// function links(){
-// 	held1.held_x-=held1.speed;
-// 	if (held1.held_x===10) {held1.held_x++};
-// }
-
-// function hoch(){
-// 	held1.held_y-=held1.speed;
-// 	if (held1.held_y===10) {held1.held_y++};
-// }held1
-
-// function runter(){
-// 	held1.held_y+=held1.speed;
-// 	if (held1.held_y===490) {held1.held_y--};
-// }

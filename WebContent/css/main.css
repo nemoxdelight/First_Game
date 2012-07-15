@@ -1,0 +1,14 @@
+body
+{ 
+  background-color: #222222;
+  font-size:        16pt;
+  padding:          10px;
+}
+
+#canvas
+{
+  display: block;
+  margin: 100px auto 0px;
+  border: 2px solid #004b5c;
+  background: #2f2f2f;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5-Tutorium: Canvas: MiniPong 01</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<!--
+    <link   rel="stylesheet"       href="css/all.min.css" />
+    <script type="text/javascript" src="js/all.min.js"     ></script>
+-->
+    <link   rel="stylesheet"       href="css/main.css" />
+    <script type="text/javascript" src="js/main.js"     ></script>
+  </head>
+  <body onload="init()">
+    <canvas id="d_canvas">
+      Ihr Browser unterstützt Canvas nicht.
+    </canvas>
+  </body>
+</html>
