@@ -6,6 +6,7 @@ var height = 500;
 
 var held1;
 
+var laeuft = false;
 
 //EINGABEN
 var KEY_LEFT  = 37;

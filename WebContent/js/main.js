@@ -36,24 +36,27 @@ window.requestAnimFrame = (function(){
 
 function startLoop() {
 
+ laeuft = true;
  loop();
  requestAnimFrame(startLoop);
 
 }
 
 function loop(){
+  if(laeuft = true){
   clearCanvas();
   level();
   held1.draw();
   feinde_zeichnen();
   // snd.play();
+ }
 }
 
 
 function move_held(p_event)
 {
   if (p_event.keyCode == KEY_RIGHT){
-    held1.held_y += 20;
+    held1.rechtsTaste = true;
     p_event.preventDefault(); 
   }
   if (p_event.keyCode == KEY_LEFT){
