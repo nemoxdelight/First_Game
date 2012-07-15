@@ -7,12 +7,14 @@ function init()
   canvas.width  = width;
   canvas.height = height;
   ctx = canvas.getContext("2d");
+  
+  held1 = new Held();
 
   startLoop();
   start_feinde_zeichnen();
 
-  document.onkeydown = o_move_paddle;
-  document.onkeyup   = o_stop_paddle;
+  document.onkeydown = move_held;
+  document.onkeyup   = stop_held;
 }
 
 function clearCanvas(){
@@ -41,19 +43,20 @@ function startLoop() {
 
 function loop(){
   clearCanvas();
-  level();
-  held1 = new Held();
   held1.draw();
   feinde_zeichnen();
+  level();
+
   // snd.play();
 }
 
 
-function o_move_paddle(p_event)
+function move_held(p_event)
 {
   if (p_event.keyCode == KEY_RIGHT){
     // rechts();
-    held1.rechtsTaste = true;
+    // held1.rechtsTaste = true;
+    held1.held_y += held1.speed;
     p_event.preventDefault(); 
   }
   if (p_event.keyCode == KEY_LEFT){
@@ -73,7 +76,7 @@ function o_move_paddle(p_event)
   }
 }
 
-function o_stop_paddle(p_event)
+function stop_held(p_event)
 {
   console.log("up");
 }

@@ -1,6 +1,5 @@
 //HELD Klasse
 
-
 function Held(){
 
 	this.held_x = 75;
@@ -42,16 +41,16 @@ Held.prototype.draw = function() {
 
 
 Held.prototype.tasteCheck = function() {
-	if(this.hochTaste)	{
+	if(this.hochTaste == true)	{
 		this.held_y -= this.speed;
 	}
-	if(this.rechtsTaste){
+	if(this.rechtsTaste == true){
 		this.held_x += this.speed;
 	}
-	if(this.linksTaste){
+	if(this.linksTaste == true){
 		this.held_x -= this.speed;
 	}
-	if(this.runterTaste){
+	if(this.runterTaste == true){
 		this.held_y += this.speed;
 	}
 };
